@@ -1,0 +1,99 @@
+$card_color:$strong_purple;
+$background_color:$light_purple;
+$card_height: 13rem;
+$card_width: 15rem;
+#card_section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: $background_color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .card_cover{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $card_width;
+        height: $card_height;
+        background-color: $card_color;
+        opacity: 0;
+        animation: start__animation 5s forwards;
+
+        &::before{
+            content: '';
+            position: absolute;
+            background-color:$strong_purple;
+            filter: brightness(0.85);
+            width: 11.7rem;
+            height: 11.7rem;
+            transform-origin: center center;
+            // top: -$top_height;
+            transform: rotate(45deg) translate(-36%,-36%);
+            border-radius: 15%;
+        }
+
+        .card{
+            position: relative;
+            background-color: $white;
+            width: 90%;
+            height: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s ease;
+           
+            &::before{
+                content:'';
+                position: absolute;
+                width: 90%;
+                height: 87%;
+                border: 2px dashed black;
+            }
+
+           .card_text{
+            width: 80%;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: $oswald;
+
+            span{
+                content: '';
+                color: purple;
+            }
+           }
+           
+        }
+        .card_front{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-left: calc($card_width/2) solid $strong_purple;
+            border-bottom: calc($card_height/2) solid transparent;
+            border-top: calc($card_height/2) solid transparent;
+            filter: brightness(0.95);
+
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -$card_height/2;
+                right: -$card_width/2;
+                border-right: $card_width solid $strong_purple;
+                filter: brightness(1.1);
+                border-top: $card_height solid transparent;
+            }
+        }
+        
+    }
+}
+
+@keyframes start__animation{
+    to{
+        opacity: 1;
+    }
+}
