@@ -91,10 +91,9 @@ body {
 }
 #card_section .next {
   position: absolute;
-  top: 87%;
+  top: 85%;
   text-align: center;
   color: #fff;
-  gap: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,11 +106,10 @@ body {
   width: 1.5rem;
   height: 1.5rem;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 #card_section .next a span {
   content: "";
-  margin-top: 0.15rem;
   color: #CBC3E3;
 }
 #card_section .next a:focus {
@@ -126,8 +124,7 @@ body {
 #proposal_section {
   position: relative;
   height: 100vh;
-  background-position: center;
-  background-size: cover;
+  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;

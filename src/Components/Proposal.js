@@ -1,17 +1,33 @@
 import React, { useState } from 'react'
-import { home_image } from '../api'
+import { useNavigate } from 'react-router-dom';
+import { FaHeartCrack } from "react-icons/fa6";
+
 
 const Proposal = () => {
     const [noBtnX,setNoBtnX] = useState(0)
     const [noBtnY,setNoBtnY] = useState(0)
     const [isSelected,setIsSelected] = useState(false);
+    const [date,setDate] = useState('');
+    const [showAlert,setShowAlert] = useState(false);
+    const navigate = useNavigate();
 
     const moveButton =()=> {
         setNoBtnX((Math.random()*15)-10)
         setNoBtnY((Math.random()*15)-2)
     }
+
+    const onSubmit = () => {
+      const secretDate = "02-01-2023"
+      if(date !== secretDate){
+        setShowAlert(true);
+        return;
+      }
+      navigate("/secret")
+
+    }
+
   return (
-    <section id='proposal_section' style={{backgroundImage: `url(${require("../images/home.jpg")})`}}>
+    <section id='proposal_section' >
       <div className='proposal'>
         <div className='cuestion'>
             <h3>Quieres ser mi Valentine?</h3>
@@ -28,8 +44,17 @@ const Proposal = () => {
       <div className={`proposal_card ${isSelected && "active"}`}>
         <div className='card_content'>
             <p>Cual es nuestra fecha de aniversario?</p>
-            <input className='form-control' placeholder='dd-mm-yyyy'/>
-            <button className='btn btn-dark'>Enviar</button>
+            <input 
+            className='form-control' 
+            placeholder='dd-mm-yyyy'
+            onChange={(e) => setDate(e.target.value) }/>
+            <button className='btn btn-dark' onClick={onSubmit}>Enviar</button>
+            {showAlert &&
+              <p className='text-danger fs-6'>
+              Esa no es nuestra fecha de aniversario <span><FaHeartCrack/></span>
+              </p>
+            }
+            
         </div>
       </div>
     </section>

@@ -20,11 +20,7 @@ $card_width: 15rem;
         width: $card_width;
         height: $card_height;
         background-color: $card_color;
-        // opacity: 1;
-        // scale: 0 1;
-        // transform-origin: center left;
-        // animation: start__animation 1s forwards;
-
+        
         &::before{
             content: '';
             position: absolute;
@@ -97,10 +93,9 @@ $card_width: 15rem;
 
     .next{
         position: absolute;
-        top: 87%;
+        top: 85%;
         text-align: center;
         color: $white;
-        gap: 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -113,11 +108,10 @@ $card_width: 15rem;
             width: 1.5rem;
             height: 1.5rem;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
 
             span{
                 content: '';
-                margin-top: 0.15rem;
                 color: $background_color;
             }
 

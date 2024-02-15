@@ -1,5 +1,4 @@
 import React from 'react'
-import { home_image } from '../api'
 import CardSection from '../Components/CardSection'
 import Proposal from '../Components/Proposal'
 
