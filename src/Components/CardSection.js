@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { heart_icon } from '../api'
+import { FaAngleDown } from "react-icons/fa";
+
 
 const CardSection = () => {
   const [isClicked,setIsClicked] = useState(false)
@@ -14,6 +16,10 @@ const CardSection = () => {
             </div>
           </div>
           <div className='card_front'></div>
+        </div>
+        <div className='next'>
+          <p>Baja para continuar</p>
+          <a href='#proposal_section'><span><FaAngleDown/></span></a>
         </div>
     </section>
   )

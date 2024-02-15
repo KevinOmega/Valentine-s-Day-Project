@@ -8,6 +8,7 @@ $card_width: 15rem;
     height: 100vh;
     background-color: $background_color;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     
@@ -19,8 +20,10 @@ $card_width: 15rem;
         width: $card_width;
         height: $card_height;
         background-color: $card_color;
-        opacity: 0;
-        animation: start__animation 5s forwards;
+        // opacity: 1;
+        // scale: 0 1;
+        // transform-origin: center left;
+        // animation: start__animation 1s forwards;
 
         &::before{
             content: '';
@@ -61,6 +64,7 @@ $card_width: 15rem;
             align-items: center;
             text-align: center;
             font-family: $oswald;
+            user-select: none;
 
             span{
                 content: '';
@@ -90,10 +94,43 @@ $card_width: 15rem;
         }
         
     }
+
+    .next{
+        position: absolute;
+        top: 87%;
+        text-align: center;
+        color: $white;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        a{
+            list-style: none;
+            background-color: $white;
+            border-radius: 50%;
+            display: flex;
+            width: 1.5rem;
+            height: 1.5rem;
+            justify-content: center;
+            align-items: flex-start;
+
+            span{
+                content: '';
+                margin-top: 0.15rem;
+                color: $background_color;
+            }
+
+            &:focus{
+                scale: 0.9;
+
+            }
+        }
+    }
 }
 
 @keyframes start__animation{
     to{
-        opacity: 1;
+        scale: 1 1;
     }
 }

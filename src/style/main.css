@@ -14,6 +14,7 @@ body {
   height: 100vh;
   background-color: #CBC3E3;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -25,8 +26,6 @@ body {
   width: 15rem;
   height: 13rem;
   background-color: #a87fa9;
-  opacity: 0;
-  animation: start__animation 5s forwards;
 }
 #card_section .card_cover::before {
   content: "";
@@ -64,6 +63,9 @@ body {
   align-items: center;
   text-align: center;
   font-family: "Oswald", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 #card_section .card_cover .card .card_text span {
   content: "";
@@ -87,9 +89,104 @@ body {
   filter: brightness(1.1);
   border-top: 13rem solid transparent;
 }
+#card_section .next {
+  position: absolute;
+  top: 87%;
+  text-align: center;
+  color: #fff;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#card_section .next a {
+  list-style: none;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+#card_section .next a span {
+  content: "";
+  margin-top: 0.15rem;
+  color: #CBC3E3;
+}
+#card_section .next a:focus {
+  scale: 0.9;
+}
 
 @keyframes start__animation {
   to {
-    opacity: 1;
+    scale: 1 1;
   }
+}
+#proposal_section {
+  position: relative;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#proposal_section .proposal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1.5rem;
+  gap: 3rem;
+}
+#proposal_section .proposal .cuestion {
+  color: #fff;
+  font-family: "Protest Strike", sans-serif;
+}
+#proposal_section .proposal .cuestion h3 {
+  font-size: 2.4rem;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#proposal_section .proposal .answer_buttons {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 1.5rem;
+}
+#proposal_section .proposal .answer_buttons button {
+  width: 5rem;
+}
+#proposal_section .proposal_card {
+  position: absolute;
+  width: 90%;
+  height: 18rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(130%, 20rem) rotate(-120deg);
+  transition: 1.5s;
+}
+#proposal_section .proposal_card .card_content {
+  border: 2px dashed black;
+  width: 90%;
+  height: 90%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+#proposal_section .proposal_card .card_content p {
+  margin: 0;
+}
+#proposal_section .proposal_card.active {
+  transform: translate(0, 0) rotate(-15deg);
 }
