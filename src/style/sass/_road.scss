@@ -1,0 +1,89 @@
+#road_page{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    overflow-y: scroll;
+    overflow-x: hidden;   
+}
+
+.introduction_section{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .hearts{
+        position: absolute;
+        bottom: 0 - 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        span{
+            content: '';
+            color: $white;
+            font-size: 0.5rem;
+            opacity: 1;
+            animation-name: hearts__animation;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+        }
+    }
+}
+
+.memories_section{
+    position: relative;
+    padding: 7rem 0;
+    color: $white;
+    font-family: $brush;
+    text-align: center;
+    p{
+        font-size: 1.5rem;
+    }
+    .memorie{
+        position: relative;
+        display: flex;
+        align-items: center;
+        .image_container{
+            border: 5px solid $strong-purple;
+            transform: rotate(5deg);   
+        }
+        .image{
+            width: 12rem;
+            height: 15rem;
+            background-position: center;
+            background-size: contain;
+            border: 3px solid $light_purple;
+        }
+
+    }
+}
+
+@keyframes hearts__animation{
+    0%{
+        opacity: 0.1;
+        scale: 1;
+    }
+    50%{
+        filter: blur(0px);
+        opacity: 0.5;
+    }
+    75%{
+        filter:blur(0px);
+    }
+    80%{
+        filter: blur(1px);
+    }
+    100%{
+        transform: translateY(-5rem);
+        scale: 10;
+        filter: blur(10px);
+        opacity: 1;
+    }
+}

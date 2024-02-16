@@ -187,3 +187,90 @@ body {
 #proposal_section .proposal_card.active {
   transform: translate(0, 0) rotate(-15deg);
 }
+
+#road_page {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.introduction_section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.introduction_section .hearts {
+  position: absolute;
+  bottom: -1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.introduction_section .hearts span {
+  content: "";
+  color: #fff;
+  font-size: 0.5rem;
+  opacity: 1;
+  animation-name: hearts__animation;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.memories_section {
+  position: relative;
+  padding: 7rem 0;
+  color: #fff;
+  font-family: "Alex Brush", cursive;
+  text-align: center;
+}
+.memories_section p {
+  font-size: 1.5rem;
+}
+.memories_section .memorie {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.memories_section .memorie .image_container {
+  border: 5px solid #a87fa9;
+  transform: rotate(5deg);
+}
+.memories_section .memorie .image {
+  width: 12rem;
+  height: 15rem;
+  background-position: center;
+  background-size: contain;
+  border: 3px solid #CBC3E3;
+}
+
+@keyframes hearts__animation {
+  0% {
+    opacity: 0.1;
+    scale: 1;
+  }
+  50% {
+    filter: blur(0px);
+    opacity: 0.5;
+  }
+  75% {
+    filter: blur(0px);
+  }
+  80% {
+    filter: blur(1px);
+  }
+  100% {
+    transform: translateY(-5rem);
+    scale: 10;
+    filter: blur(10px);
+    opacity: 1;
+  }
+}
