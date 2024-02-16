@@ -14,17 +14,17 @@ const memorie_items = [
     {
         id: 2,
         img: "/images/us2.jpg",
-        text: "Y solo quiero decirte que gracias, fuiste y seras la mejor compañera de vida que puedo pedir"
+        text: "Y solo quiero decirte que gracias, eres lo mejor que me paso y estoy muy feliz de estar contigo"
     },
     {
         id: 3,
-        img: "/images/navidad.jpg",
-        text: "Pasamos tantos momentos inolvidables juntos y se que tendremos muchos mas "
+        img: "/images/heart.jpg",
+        text: "Gracias por alegrarme la vida, nunca habia sido tan feliz antes de estar contigo  "
     },
     {
         id: 4,
-        img: "/images/pizza.jpg",
-        text: ""
+        img: "/images/navidad.jpg",
+        text: "Pasamos tantos momentos inolvidables juntos, y se que pasaremos muchos mas   "
     },
     {
         id: 5,
@@ -33,13 +33,13 @@ const memorie_items = [
     },
     {
         id: 6,
-        img: "/images/queso.jpg",
-        text: ""
+        img: "/images/pizza.jpg",
+        text: "Adoro pasar tiempo contigo"
     },
     {
         id: 7,
         img: "/images/birthday.jpg",
-        text: "Gracias por hacerme sentir especial, amo todos los detalles que tuviste conmigo y lo siento si no he sido muy detallista con tigo, te prometo que me esforzare mas solo tenme paciencia."
+        text: "Y gracias por hacerme sentir especial, amo cada uno de los detalles que tienes conmigo, no podia pedir a naide mejor que tu"
     },
     {
         id: 8,
@@ -48,4 +48,31 @@ const memorie_items = [
     },
 ];
 
-export {home_image,heart_icon,memorie_items};
+const final_items = [
+    {
+        id : 1,
+        img : "/images/us.jpg"
+    },
+    {
+        id : 2,
+        img : "/images/home.jpg"
+    },
+    {
+        id : 3,
+        img : "/images/heart.jpg"
+    },
+    {
+        id : 4,
+        img : "/images/navidad.jpg"
+    },
+    {
+        id : 5,
+        img : "/images/picture.jpg"
+    },
+    {
+        id : 6,
+        img : "/images/us2.jpg"
+    },
+]
+
+export {home_image,heart_icon,memorie_items,final_items};

@@ -206,6 +206,24 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  color: #fff;
+}
+.introduction_section .introduction_message_container {
+  position: absolute;
+  top: 10%;
+  transition: 2s linear;
+}
+.introduction_section .introduction_message_container h4 {
+  font-size: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.introduction_section .introduction_message_container.disapear {
+  opacity: 0;
+}
+.introduction_section .introduction_message_container.disapear h4 {
+  filter: blur(10px);
 }
 .introduction_section .hearts {
   position: absolute;
@@ -244,8 +262,8 @@ body {
   width: 50%;
   animation-name: scrolling__effect;
   animation-timeline: view();
-  animation-range-start: 10%;
-  animation-range-end: 60%;
+  animation-range-start: 0%;
+  animation-range-end: 30%;
   animation-fill-mode: forwards;
   opacity: 0;
   transform: translateX(-10rem);
@@ -299,6 +317,42 @@ body {
     opacity: 1;
   }
 }
+.final_section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0;
+}
+.final_section .final_text {
+  margin: 4rem 1.5rem;
+  animation-name: text_disapear;
+  animation-timeline: view();
+  animation-fill-mode: forwards;
+  animation-range-start: 40%;
+  animation-range-end: 60%;
+  animation-delay: 3s;
+}
+.final_section .final_text h4 {
+  font-size: 1.7rem;
+  font-family: "Oswald", sans-serif;
+}
+.final_section .final_image {
+  width: 100%;
+  height: 12rem;
+  background-position: center;
+  background-size: cover;
+  border: 3px solid #fff;
+  margin: 0.5rem 0;
+  border-radius: 5%;
+}
+
 @keyframes scrolling__effect {
   to {
     opacity: 1;

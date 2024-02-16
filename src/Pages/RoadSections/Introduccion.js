@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { heart_icon } from '../../api';
 
-const Introduccion = () => {
+const Introduccion = ({isPlaying}) => {
 
     const createHearts = (n) => {
         const hearts = [];
@@ -10,11 +10,14 @@ const Introduccion = () => {
         }
         return hearts;
       }
+
+      useEffect(() => {
+        console.log(isPlaying);
+      },[isPlaying])
   return (
     <section className='introduction_section'>
-        <div className='introduction_message_container'>
-            {/* <h4>Hola, espero que te este gustando</h4>
-            <h4>Baja con migo para ver mas mi amor</h4> */}
+        <div className={`introduction_message_container ${isPlaying && "disapear"}`}>
+            <h4>Presiona para iniciar</h4>
         </div>
         <div className='hearts'>
             {createHearts(10).map((item,index) => 
