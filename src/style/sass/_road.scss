@@ -1,3 +1,7 @@
+$image_rotation: 5deg;
+$rotation_before: 45deg;
+$translateX: 10rem;
+$translateY: 5rem;
 #road_page{
     position: relative;
     height: 100vh;
@@ -39,20 +43,40 @@
 
 .memories_section{
     position: relative;
-    padding: 7rem 0;
+    padding: 10rem 0;
     color: $white;
-    font-family: $brush;
+    font-family: $oswald;
     text-align: center;
-    p{
-        font-size: 1.5rem;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    
+    
     .memorie{
         position: relative;
         display: flex;
         align-items: center;
+
+        .memorie_text{
+            width: 50%;
+            animation-name: scrolling__effect;
+            animation-timeline: view();
+            animation-range-start: 10%;
+            animation-range-end: 60%;
+            animation-fill-mode: forwards;
+            opacity: 0;
+            transform: translateX(-$translateX);
+            p{
+                font-size: 1rem;
+            }
+        }
+
         .image_container{
             border: 5px solid $strong-purple;
-            transform: rotate(5deg);   
+            transform: translate($translateX, $translateY) rotate($rotation_before) ; 
+            animation-name: scrolling__effect;
+            animation-timeline: view();
+            opacity: 0;  
         }
         .image{
             width: 12rem;
@@ -61,7 +85,19 @@
             background-size: contain;
             border: 3px solid $light_purple;
         }
+        &.type2{
+            flex-direction: row-reverse;
 
+            .memorie_text{
+                transform: translateX($translateX);
+            }
+
+            .image_container{
+                transform: translate(-$translateX, -$translateY) rotate(-$rotation_before) ; 
+            }
+        }
+
+        
     }
 }
 
@@ -85,5 +121,12 @@
         scale: 10;
         filter: blur(10px);
         opacity: 1;
+    }
+}
+
+@keyframes scrolling__effect{
+    to{
+        opacity: 1;
+        transform: rotate(0) translate(0);
     }
 }

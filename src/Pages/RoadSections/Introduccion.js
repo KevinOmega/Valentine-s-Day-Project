@@ -17,8 +17,8 @@ const Introduccion = () => {
             <h4>Baja con migo para ver mas mi amor</h4> */}
         </div>
         <div className='hearts'>
-            {createHearts(10).map((item) => 
-            <span style={{animationDelay:`${item.delay}s`,
+            {createHearts(10).map((item,index) => 
+            <span key={index} style={{animationDelay:`${item.delay}s`,
             animationDuration:`${item.duration}s`}}>
                 {heart_icon}
             </span>)}

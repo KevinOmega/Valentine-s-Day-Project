@@ -227,22 +227,38 @@ body {
 
 .memories_section {
   position: relative;
-  padding: 7rem 0;
+  padding: 10rem 0;
   color: #fff;
-  font-family: "Alex Brush", cursive;
+  font-family: "Oswald", sans-serif;
   text-align: center;
-}
-.memories_section p {
-  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
 }
 .memories_section .memorie {
   position: relative;
   display: flex;
   align-items: center;
 }
+.memories_section .memorie .memorie_text {
+  width: 50%;
+  animation-name: scrolling__effect;
+  animation-timeline: view();
+  animation-range-start: 10%;
+  animation-range-end: 60%;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translateX(-10rem);
+}
+.memories_section .memorie .memorie_text p {
+  font-size: 1rem;
+}
 .memories_section .memorie .image_container {
   border: 5px solid #a87fa9;
-  transform: rotate(5deg);
+  transform: translate(10rem, 5rem) rotate(45deg);
+  animation-name: scrolling__effect;
+  animation-timeline: view();
+  opacity: 0;
 }
 .memories_section .memorie .image {
   width: 12rem;
@@ -250,6 +266,15 @@ body {
   background-position: center;
   background-size: contain;
   border: 3px solid #CBC3E3;
+}
+.memories_section .memorie.type2 {
+  flex-direction: row-reverse;
+}
+.memories_section .memorie.type2 .memorie_text {
+  transform: translateX(10rem);
+}
+.memories_section .memorie.type2 .image_container {
+  transform: translate(-10rem, -5rem) rotate(-45deg);
 }
 
 @keyframes hearts__animation {
@@ -272,5 +297,11 @@ body {
     scale: 10;
     filter: blur(10px);
     opacity: 1;
+  }
+}
+@keyframes scrolling__effect {
+  to {
+    opacity: 1;
+    transform: rotate(0) translate(0);
   }
 }

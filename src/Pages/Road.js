@@ -1,11 +1,10 @@
-import React, {  useRef, useState } from 'react'
+import React, {  useState } from 'react'
 import sound from "../Audio/closeToYou.mp3"
 import Introduccion from './RoadSections/Introduccion';
 import Memories from './RoadSections/Memories';
 
 const Road = () => {
   const [isPlaying,setIsPlaying] = useState(false)
-  const audioRef = useRef();
 
   const playMusic = () =>{
     const audio = new Audio(sound);
