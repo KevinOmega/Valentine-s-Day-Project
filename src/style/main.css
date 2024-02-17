@@ -151,6 +151,23 @@ body {
   align-items: center;
   overflow: hidden;
 }
+#proposal_section .wrapper {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  transition: 1s;
+  transform-origin: left center;
+}
+#proposal_section .wrapper .wrapper_section {
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 #proposal_section .proposal {
   display: flex;
   flex-direction: column;
@@ -179,18 +196,18 @@ body {
 #proposal_section .proposal .answer_buttons button {
   width: 5rem;
 }
-#proposal_section .proposal_card {
-  position: absolute;
-  width: 90%;
+
+.proposal_card {
+  width: 17rem;
   height: 18rem;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translate(130%, 20rem) rotate(-120deg);
   transition: 1.5s;
 }
-#proposal_section .proposal_card .card_content {
+.proposal_card .card_content {
+  position: relative;
   border: 2px dashed black;
   width: 90%;
   height: 90%;
@@ -201,11 +218,30 @@ body {
   justify-content: center;
   align-items: flex-start;
   gap: 1rem;
+  text-align: center;
 }
-#proposal_section .proposal_card .card_content p {
+.proposal_card .card_content .card_text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.proposal_card .card_content .card_text .span {
+  font-size: 0.5rem;
+  position: absolute;
+  bottom: 0;
+}
+.proposal_card .card_content p {
+  text-align: center;
   margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-#proposal_section .proposal_card.active {
+.proposal_card.type2 {
+  position: absolute;
+  transform: translate(150%, 20rem) rotate(-120deg);
+}
+.proposal_card.active {
   transform: translate(0, 0) rotate(-15deg);
 }
 

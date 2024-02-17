@@ -15,7 +15,7 @@ const Last = () => {
             return(
                 <div className='col col-6 image_container' key={item.id}>
                     <div className='final_image'
-                        style={{backgroundImage: `url(${item.img})`, animationDelay: `${(Math.random()*10)+5}s`, animationDuration:`${(Math.random() *4) +6}s`}}
+                        style={{backgroundImage: `url(${item.img})`, animationDelay: `${(Math.random()*3)+2}s`, animationDuration:`${(Math.random() *4) +6}s`}}
                     ></div>
                 </div>
             );

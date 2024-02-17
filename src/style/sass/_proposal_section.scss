@@ -5,6 +5,24 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    .wrapper{
+        position: relative;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        transition: 1s;
+        transform-origin: left center;
+
+        .wrapper_section{
+            height: 50vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
     .proposal{
         display: flex;
         flex-direction: column;
@@ -35,36 +53,55 @@
         }
     }
 
-    .proposal_card{
-        position: absolute;
-        width: 90%;
-        height: 18rem;
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: translate(130%,20rem) rotate(-120deg);
-        transition: 1.5s;
-
-        .card_content{
-            border: 2px dashed black;
-            width: 90%;
-            height: 90%;
-            box-sizing: border-box;
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 1rem;
-
-            p{
-                margin: 0;
-            }
-        }
-        &.active{
-            transform: translate(0,0) rotate(-15deg);
-        }
-    }
+    
 }
 
+.proposal_card{
+    width: 17rem;
+    height: 18rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1.5s;
+
+    .card_content{
+        position: relative;
+        border: 2px dashed black;
+        width: 90%;
+        height: 90%;
+        box-sizing: border-box;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+        text-align: center;
+
+        .card_text{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .span{
+                font-size: 0.5rem;
+                position: absolute;
+                bottom:0
+            }
+        }
+        p{
+            text-align: center;
+            margin: 0;
+            user-select: none;
+        }
+    }
+    &.type2{
+        position: absolute;
+        transform: translate(150%,20rem) rotate(-120deg);
+        
+    }
+    &.active{
+        transform: translate(0,0) rotate(-15deg);
+    }
+}

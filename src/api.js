@@ -9,6 +9,22 @@ const background3= "/images/picture.jpg"
 
 const heart_icon= <FaHeart/>;
 
+const messages = [
+    {
+        id:1,
+        message: "Pero antes una pregunta"
+    },
+    {
+        id:2,
+        message: "Este es tu regalo"
+    },
+    {
+        id:3,
+        message: "Hola mi amor"
+    }
+
+]
+
 const memorie_items = [
     {
         id: 1,
@@ -38,17 +54,17 @@ const memorie_items = [
     {
         id: 6,
         img: "/images/pijamas.jpg",
-        text: "Adoro pasar tiempo contigo"
+        text: "Adoro pasar tiempo contigo, y cada dia que pasa siento que estoy mas enamorado de ti"
     },
     {
         id: 7,
         img: "/images/birthday2.jpg",
-        text: "Y gracias por hacerme sentir especial, amo cada uno de los detalles que tienes conmigo"
+        text: "Gracias por hacerme sentir especial, amo cada uno de los detalles que tienes conmigo y te prometo que yo tambien los tendre contigo"
     },
     {
         id: 8,
         img: "/images/picture.jpg",
-        text: "Te amo mucho mi niña bonita y quiero que sepas que siempre tendras un lugar en mi corazon"
+        text: "Te amo mucho mi niña bonita y quiero que sepas que siempre tendras un lugar en mi corazon."
     },
     {
         id: 9,
@@ -97,4 +113,4 @@ const final_items = [
     },
 ]
 
-export {home_image,heart_icon,memorie_items,final_items,background1,background2,background3};
+export {home_image,heart_icon,memorie_items,final_items,background1,background2,background3,messages};
