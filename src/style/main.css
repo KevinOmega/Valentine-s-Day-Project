@@ -8,6 +8,15 @@ body {
   font-size: 20px;
 }
 
+.background {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: grayscale(0.8);
+}
+
 .img_background {
   background-position: center;
   background-repeat: no-repeat;
@@ -18,14 +27,6 @@ body {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
-}
-#home_page .home_background {
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  filter: grayscale(0.8);
 }
 
 #card_section {
@@ -209,11 +210,8 @@ body {
 }
 
 #road_page {
-  position: relative;
   height: 100vh;
-  width: 100vw;
-  background-position: center;
-  background-size: cover;
+  width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -341,7 +339,6 @@ body {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  background-color: black;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -371,11 +368,32 @@ body {
   border: 3px solid #fff;
   margin: 0.5rem 0;
   border-radius: 5%;
+  animation-name: img_effect;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 @keyframes scrolling__effect {
   to {
     opacity: 1;
     transform: rotate(0) translate(0);
+  }
+}
+@keyframes img_effect {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

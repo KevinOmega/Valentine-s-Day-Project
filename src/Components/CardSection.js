@@ -18,7 +18,7 @@ const CardSection = () => {
           <div className='card_front'></div>
         </div>
         <div className='next'>
-          <p>Baja para continuar</p>
+          <p>Baja conmigo mi amor</p>
           <a href='#proposal_section'><span><FaAngleDown/></span></a>
         </div>
     </section>

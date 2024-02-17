@@ -3,6 +3,7 @@ import sound from "../Audio/closeToYou.mp3"
 import Introduccion from './RoadSections/Introduccion';
 import Memories from './RoadSections/Memories';
 import Last from './RoadSections/Last';
+import { background1} from '../api';
 
 const Road = () => {
   const [isPlaying,setIsPlaying] = useState(false)
@@ -20,7 +21,8 @@ const Road = () => {
 
   
   return ( 
-    <div id='road_page' onClick={playMusic} style={{backgroundImage: `url(${require("../images/home.jpg")})`}}>
+    <div id='road_page' onClick={playMusic} >
+      <div className='background img_background' style={{backgroundImage : `url(${background1})`}}></div>
       <Introduccion isPlaying={isPlaying}/>
       <Memories/>
       <Last/>

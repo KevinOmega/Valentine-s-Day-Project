@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { heart_icon } from '../../api';
+import {  heart_icon, home_image } from '../../api';
 
 const Introduccion = ({isPlaying}) => {
 
@@ -16,6 +16,7 @@ const Introduccion = ({isPlaying}) => {
       },[isPlaying])
   return (
     <section className='introduction_section'>
+        <div className='background img_background' style={{backgroundImage: `url(${home_image})`}}></div>
         <div className={`introduction_message_container ${isPlaying && "disapear"}`}>
             <h4>Presiona para iniciar</h4>
         </div>

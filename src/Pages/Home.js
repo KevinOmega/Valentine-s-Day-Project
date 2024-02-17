@@ -1,12 +1,12 @@
 import React from 'react'
 import CardSection from '../Components/CardSection'
 import Proposal from '../Components/Proposal'
-import { background1 } from '../api'
+import { background2 } from '../api'
 
 const Home = () => {
   return (
     <div id='home_page'>
-      <div className='home_background img_background' style={{backgroundImage : `url(${background1})`}}></div>
+      <div className='background img_background' style={{backgroundImage : `url(${background2})`}}></div>
       <CardSection/>
       <Proposal/>
     </div>
