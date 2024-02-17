@@ -8,11 +8,32 @@ body {
   font-size: 20px;
 }
 
+.img_background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#home_page {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+#home_page .home_background {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  filter: grayscale(0.8);
+}
+
 #card_section {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: #CBC3E3;
+  background: #a87fa9;
+  background: linear-gradient(0deg, #a87fa9 0%, #bc9fbc 50%, #a87fa9 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,7 +145,6 @@ body {
 #proposal_section {
   position: relative;
   height: 100vh;
-  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -27,7 +27,7 @@ const Proposal = () => {
     }
 
   return (
-    <section id='proposal_section' >
+    <section id='proposal_section'>
       <div className='proposal'>
         <div className='cuestion'>
             <h3>Quieres ser mi Valentine?</h3>

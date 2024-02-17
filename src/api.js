@@ -1,7 +1,9 @@
 import { FaHeart } from "react-icons/fa6";
 
 
-const home_image= "../images/home.jpg"
+const home_image= "/images/home.jpg"
+const  background1= "/images/us.jpg"
+const background2= "/images/us3.jpg"
 
 const heart_icon= <FaHeart/>;
 
@@ -75,4 +77,4 @@ const final_items = [
     },
 ]
 
-export {home_image,heart_icon,memorie_items,final_items};
+export {home_image,heart_icon,memorie_items,final_items,background1,background2};

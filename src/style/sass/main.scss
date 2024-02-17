@@ -24,6 +24,12 @@ $purple: #bc9fbc;
 $light_purple: #CBC3E3;
 $light_violet: #CF9FFF;
 
+.img_background{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 
 @import "./home";
