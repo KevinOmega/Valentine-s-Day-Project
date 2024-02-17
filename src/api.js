@@ -4,7 +4,7 @@ import { FaHeart } from "react-icons/fa6";
 const home_image= "/images/home.jpg"
 const  background1= "/images/us.jpg"
 const background2= "/images/us3.jpg"
-const background3= "/images/pijama.jpg"
+const background3= "/images/picture.jpg"
 
 
 const heart_icon= <FaHeart/>;
@@ -73,7 +73,7 @@ const final_items = [
     },
     {
         id : 3,
-        img : "/images/heart.jpg"
+        img : "/images/us3.jpg"
     },
     {
         id : 4,
@@ -81,11 +81,19 @@ const final_items = [
     },
     {
         id : 5,
-        img : "/images/picture.jpg"
+        img : "/images/pijamas.jpg"
     },
     {
         id : 6,
         img : "/images/us2.jpg"
+    },
+    {
+        id : 7,
+        img : "/images/cristo.jpg"
+    },
+    {
+        id : 8,
+        img : "/images/kiss.jpg"
     },
 ]
 

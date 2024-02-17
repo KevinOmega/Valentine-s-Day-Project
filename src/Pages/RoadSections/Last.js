@@ -1,9 +1,10 @@
 import React from 'react'
-import { background1, background3, final_items } from '../../api'
+import { background3, final_items } from '../../api'
 
 const Last = () => {
   return (
-    <section className='final_section img_background' style={{backgroundImage: background1}}>
+    <section className='final_section'>
+        <div className='background img_background' style={{backgroundImage: `url(${background3})`}}></div>
         {/* <div className='final_text'>
             <h4>Espero que te haya gustado</h4>
             <h4>Lo hice con mucho amor para ti</h4>
@@ -14,7 +15,7 @@ const Last = () => {
             return(
                 <div className='col col-6 image_container' key={item.id}>
                     <div className='final_image'
-                        style={{backgroundImage: `url(${item.img})`, animationDelay: `${(Math.random()*20)+5}s`}}
+                        style={{backgroundImage: `url(${item.img})`, animationDelay: `${(Math.random()*10)+5}s`, animationDuration:`${(Math.random() *4) +6}s`}}
                     ></div>
                 </div>
             );
