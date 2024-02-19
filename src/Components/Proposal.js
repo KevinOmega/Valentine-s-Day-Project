@@ -23,7 +23,7 @@ const Proposal = () => {
 
     const onSubmit = () => {
       const secretDate = "02-01-2023"
-      if(date !== secretDate){
+      if(date.trim() !== secretDate){
         setShowAlert(true);
         return;
       }
