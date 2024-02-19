@@ -11,8 +11,12 @@ const heart_icon= <FaHeart/>;
 
 const messages = [
     {
-        id:1,
+        id:4,
         message: "Pero antes una pregunta"
+    },
+    {
+        id:1,
+        message: "Espero que te guste"
     },
     {
         id:2,
@@ -21,7 +25,8 @@ const messages = [
     {
         id:3,
         message: "Hola mi amor"
-    }
+    },
+    
 
 ]
 
